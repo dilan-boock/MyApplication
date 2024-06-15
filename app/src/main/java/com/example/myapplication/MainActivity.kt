@@ -44,8 +44,6 @@ class MainActivity : AppCompatActivity() {
             showDialogSelection()
         }
 
-        val webView: WebView = findViewById(R.id.webView)
-
     }
     private fun showDialogStart() {
         val dialogView = LayoutInflater.from(this).inflate(R.layout.fragment_push_start, null)
