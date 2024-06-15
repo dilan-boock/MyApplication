@@ -6,10 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class BlankFragment : Fragment() {
+class BlankFragment1 : Fragment() {
 
     companion object {
-        fun newInstance() = BlankFragment()
+        fun newInstance() = BlankFragment1()
     }
 
 
@@ -17,6 +17,6 @@ class BlankFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_push_start, container, false)
+        return inflater.inflate(R.layout.fragment_push_save, container, false)
     }
 }

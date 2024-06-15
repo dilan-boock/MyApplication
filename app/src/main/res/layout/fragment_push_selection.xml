@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="312dp"
-    android:layout_height="208dp"
+    android:layout_width="350dp"
+    android:layout_height="230dp"
     android:orientation="vertical"
     android:layout_gravity="center"
     android:background="@drawable/cards2_border"
-    tools:context=".BlankFragment">
+    tools:context=".BlankFragment2">
 
     <LinearLayout
-        android:layout_width="264dp"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:orientation="vertical"
@@ -22,42 +22,43 @@
             android:textSize="24dp"
             android:textStyle="bold"
             android:text="ВАЖНО!"/>
-        <TextView
+
+        <LinearLayout
             android:layout_width="264dp"
-            android:layout_height="32dp"
-            android:textColor="#1C1B1F"
-            android:textSize="12sp"
-            android:layout_marginTop="20dp"
-            android:text="Начиная маршрут вы подтверждаете, что находитесь в зоне маршрута. Это важно для расчета количества туристов"/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp">
+
+            <ImageView
+                android:layout_width="71dp"
+                android:layout_height="71dp"
+                android:src="@drawable/eror"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#1C1B1F"
+                android:textSize="22sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="25dp"
+                android:textStyle="bold"
+                android:text="Находится в разработке..."/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="281dp"
-        android:layout_height="88dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="130dp">
-
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="-15dp"
-            android:textColor="@color/black"
-            android:textSize="12sp"
-            android:background="#00FFFFFF"
-            android:text="Скачать маршрут"/>
-
-        <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_exit"
+            android:layout_width="281dp"
             android:layout_height="40dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"
-            android:backgroundTint="@drawable/button_background"
-            android:text="Подобрать маршрут"
+            android:layout_marginTop="140dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/button_background"
+            android:text="ЗАКРЫТЬ"
             android:textColor="@color/white"
             android:textSize="12sp"/>
-    </LinearLayout>
 
 </FrameLayout>
