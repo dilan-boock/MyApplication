@@ -1,11 +1,19 @@
 package com.example.myapplication
 
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -36,6 +44,8 @@ class MainActivity : AppCompatActivity() {
             showDialogSelection()
         }
 
+        val webView: WebView = findViewById(R.id.webView)
+
     }
     private fun showDialogStart() {
         val dialogView = LayoutInflater.from(this).inflate(R.layout.fragment_push_start, null)
@@ -54,11 +64,21 @@ class MainActivity : AppCompatActivity() {
 
         val button2: Button = dialogView.findViewById(R.id.btn_start)
         button2.setOnClickListener {
-            // Действие при нажатии на кнопку 2
-            //alertDialog.dismiss() // Закрыть диалог
+
+            alertDialog.dismiss()
+            webViews()
+
         }
 
         alertDialog.show()
+    }
+
+
+    private fun webViews(){
+
+        val url = "https://swan-decent-shrew.ngrok-free.app/api/map/"
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        startActivity(intent)
     }
 
     private fun showDialogSave() {

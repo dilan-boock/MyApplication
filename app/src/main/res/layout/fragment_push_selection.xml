@@ -21,7 +21,7 @@
             android:textColor="#1C1B1F"
             android:textSize="24dp"
             android:textStyle="bold"
-            android:text="ВАЖНО!"/>
+            android:text="SORRY!"/>
 
         <LinearLayout
             android:layout_width="264dp"
