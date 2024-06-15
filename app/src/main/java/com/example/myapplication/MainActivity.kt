@@ -78,8 +78,26 @@ class MainActivity : AppCompatActivity() {
 
         val button2: Button = dialogView.findViewById(R.id.btn_save)
         button2.setOnClickListener {
-            // Действие при нажатии на кнопку 2
-            //alertDialog.dismiss() // Закрыть диалог
+            showDialogSave2()
+            alertDialog.dismiss() // Закрыть диалог
+        }
+
+        alertDialog.show()
+    }
+
+    private fun showDialogSave2(){
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.fragment_push_save2, null)
+
+        val builder = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .setCancelable(false) // Нельзя закрыть кнопкой "назад"
+
+        val alertDialog = builder.create()
+
+        val button1: Button = dialogView.findViewById(R.id.btn_exit)
+        button1.setOnClickListener {
+            // Действие при нажатии на кнопку 1
+            alertDialog.dismiss() // Закрыть диалог
         }
 
         alertDialog.show()
