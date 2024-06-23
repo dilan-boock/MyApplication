@@ -9,6 +9,8 @@ import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.ScrollView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -42,6 +44,24 @@ class MainActivity : AppCompatActivity() {
         val SelectionRoute: Button = findViewById(R.id.selection_route)
         SelectionRoute.setOnClickListener {
             showDialogSelection()
+        }
+
+        val HomeRoute: ImageButton = findViewById(R.id.home_btn)
+        HomeRoute.setOnClickListener {
+            val scrollView: ScrollView = findViewById(R.id.scroll_main)
+            scrollView.smoothScrollTo(0, 0)
+        }
+
+        val MapRoute: ImageButton = findViewById(R.id.map_btn)
+        MapRoute.setOnClickListener {
+            val intent = Intent(this, MapActivity::class.java)
+            startActivity(intent)
+        }
+
+        val PersonRoute: ImageButton = findViewById(R.id.person_btn)
+        PersonRoute.setOnClickListener {
+            val intent = Intent(this, PersonActivity::class.java)
+            startActivity(intent)
         }
 
     }
